@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim - Rest Burger</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-buttons">
+            <a href="#" class="glass-button">
+                <i class="fa-solid fa-qrcode"></i>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="cart-header">
+        <h1>Sepetim</h1>
+    </div>
+
+    <main class="cart-container">
+        <div class="cart-items" id="cartItems">
+            <!-- Sepet öğeleri JavaScript ile buraya eklenecek -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="total-price">
+                <span>Toplam Tutar:</span>
+                <span id="totalPrice">₺0.00</span>
+            </div>
+            <div class="cart-buttons">
+                <button class="clear-cart" id="clearCart">
+                    <i class="fa-solid fa-trash"></i>
+                    Sepeti Temizle
+                </button>
+                <button class="checkout" id="checkout">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Ödeme Yap
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="../index.html" class="footer-button">
+                <i class="fa-solid fa-house"></i>
+                <span>Ana Sayfa</span>
+            </a>
+            <a href="../pages/menu.html" class="footer-button">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Menü</span>
+            </a>
+            <a href="../pages/cart.html" class="cart-button btn-cart active">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span>Sepet</span>
+            </a>
+            <a href="../pages/campaigns.html" class="footer-button">
+                <i class="fa-solid fa-tags"></i>
+                <span>Kampanyalar</span>
+            </a>
+            <a href="../pages/orders.html" class="footer-button">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Siparişlerim</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html> 

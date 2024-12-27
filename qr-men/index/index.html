@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Burger - QR Menü</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-buttons">
+            <a href="#" class="glass-button">
+                <i class="fa-solid fa-qrcode"></i>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Kategori Menüsü -->
+    <div class="category-menu" id="categoryMenu">
+        <h2 class="category-menu-header">Menüler</h2>
+        <div class="category-grid">
+            <a href="categories/breakfast.html" class="category-card">
+                <img src="img/burger.jpg" alt="Kahvaltı" class="category-image">
+                <div class="category-title">Kahvaltı</div>
+            </a>
+            <a href="categories/hot-drinks.html" class="category-card">
+                <img src="img/burger.jpg" alt="Sıcak İçecekler" class="category-image">
+                <div class="category-title">Sıcak İçecekler</div>
+            </a>
+            <a href="categories/cold-drinks.html" class="category-card">
+                <img src="img/burger.jpg" alt="Soğuk İçecekler" class="category-image">
+                <div class="category-title">Soğuk İçecekler</div>
+            </a>
+            <a href="categories/beverages.html" class="category-card">
+                <img src="img/burger.jpg" alt="Kutu İçecekler" class="category-image">
+                <div class="category-title">Kutu İçecekler</div>
+            </a>
+            <a href="categories/snacks.html" class="category-card">
+                <img src="img/burger.jpg" alt="Atıştırmalıklar" class="category-image">
+                <div class="category-title">Atıştırmalıklar</div>
+            </a>
+            <a href="categories/main-dishes.html" class="category-card">
+                <img src="img/burger.jpg" alt="Ana Yemek" class="category-image">
+                <div class="category-title">Ana Yemek</div>
+            </a>
+            <a href="categories/burgers.html" class="category-card">
+                <img src="img/burger.jpg" alt="Burgerler" class="category-image">
+                <div class="category-title">Burgerler</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Ana İçerik -->
+    <main>
+        <div class="logo">
+            <h1>Rest Burger</h1>
+        </div>
+
+        <div class="action-buttons">
+            <div class="button-container">
+                <div class="button-wrapper">
+                    <div class="button-row top">
+                        <a href="#" class="menu-button order-button">
+                            <div class="button-content">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Sipariş Ver</span>
+                            </div>
+                        </a>
+                        <a href="#" class="menu-button orders-button">
+                            <div class="button-content">
+                                <i class="fa-solid fa-receipt"></i>
+                                <span>Siparişlerim</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="center-wrapper">
+                        <a href="#" class="waiter-button">
+                            <div class="button-content">
+                                <i class="fa-solid fa-bell-concierge"></i>
+                                <span>Garson Çağır</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="button-row bottom">
+                        <a href="#" class="menu-button campaigns-button">
+                            <div class="button-content">
+                                <i class="fa-solid fa-tag"></i>
+                                <span>Kampanyalar</span>
+                            </div>
+                        </a>
+                        <a href="#" class="menu-button feedback-button">
+                            <div class="button-content">
+                                <i class="fa-solid fa-message"></i>
+                                <span>Görüş Bildir</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pay-button-container">
+                <a href="#" class="pay-button">
+                    <i class="fas fa-wallet"></i>
+                    <span>Hesap Öde</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="index.html" class="footer-button active">
+                <i class="fa-solid fa-house"></i>
+                <span>Ana Sayfa</span>
+            </a>
+            <a href="#" class="footer-button">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Menü</span>
+            </a>
+            <a href="pages/cart.html" class="cart-button btn-cart">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span>Sepet</span>
+            </a>
+            <a href="pages/campaigns.html" class="footer-button">
+                <i class="fa-solid fa-tags"></i>
+                <span>Kampanyalar</span>
+            </a>
+            <a href="pages/orders.html" class="footer-button">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Siparişlerim</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

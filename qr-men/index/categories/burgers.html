@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgerler - Rest Burger</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-buttons">
+            <a href="#" class="glass-button">
+                <i class="fa-solid fa-qrcode"></i>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Kategori Başlığı ve Arama -->
+    <div class="category-header">
+        <h1>Burgerler</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Ürün ara...">
+            <i class="fa-solid fa-search"></i>
+        </div>
+    </div>
+
+    <!-- Ürün Listesi -->
+    <main class="product-container">
+        <!-- Ürün Kartları -->
+        <div class="product-list">
+            <div class="product-card" data-product-id="1">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Klasik Burger">
+                </div>
+                <div class="product-info">
+                    <h3>Klasik Burger</h3>
+                    <p class="description">Dana eti, cheddar peyniri, marul, domates, turşu ve özel sos</p>
+                    <div class="price-cart">
+                        <span class="price">₺95.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="2">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Cheeseburger">
+                </div>
+                <div class="product-info">
+                    <h3>Cheeseburger</h3>
+                    <p class="description">İkili cheddar peyniri, dana eti, marul, domates ve özel sos</p>
+                    <div class="price-cart">
+                        <span class="price">₺105.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="3">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Tavuk Burger">
+                </div>
+                <div class="product-info">
+                    <h3>Tavuk Burger</h3>
+                    <p class="description">Çıtır tavuk, marul, domates, ranch sos</p>
+                    <div class="price-cart">
+                        <span class="price">₺85.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="4">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="BBQ Burger">
+                </div>
+                <div class="product-info">
+                    <h3>BBQ Burger</h3>
+                    <p class="description">Dana eti, karamelize soğan, barbekü sos, cheddar peyniri</p>
+                    <div class="price-cart">
+                        <span class="price">₺110.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="5">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Mantarlı Burger">
+                </div>
+                <div class="product-info">
+                    <h3>Mantarlı Burger</h3>
+                    <p class="description">Dana eti, sotelenmiş mantar, kaşar peyniri, özel sos</p>
+                    <div class="price-cart">
+                        <span class="price">₺115.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="6">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Mega Burger">
+                </div>
+                <div class="product-info">
+                    <h3>Mega Burger</h3>
+                    <p class="description">Çift kat dana eti, üçlü peynir, bacon, yumurta ve özel sos</p>
+                    <div class="price-cart">
+                        <span class="price">₺135.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ürün Detay Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p class="modal-description"></p>
+                    <div class="modal-price-cart">
+                        <span class="modal-price"></span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="../index.html" class="footer-button">
+                <i class="fa-solid fa-house"></i>
+                <span>Ana Sayfa</span>
+            </a>
+            <a href="../pages/menu.html" class="footer-button active">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Menü</span>
+            </a>
+            <a href="../pages/cart.html" class="cart-button btn-cart">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span>Sepet</span>
+            </a>
+            <a href="../pages/campaigns.html" class="footer-button">
+                <i class="fa-solid fa-tags"></i>
+                <span>Kampanyalar</span>
+            </a>
+            <a href="../pages/orders.html" class="footer-button">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Siparişlerim</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/category.js"></script>
+</body>
+</html> 
