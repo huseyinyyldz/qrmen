@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahvaltı - Rest Burger</title>
+    <title>Çiğ Köfte - Mahana</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/category.css">
@@ -23,7 +23,7 @@
 
     <!-- Kategori Başlığı ve Arama -->
     <div class="category-header">
-        <h1>Kahvaltı</h1>
+        <h1>Çiğ Köfte</h1>
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Ürün ara...">
             <i class="fa-solid fa-search"></i>
@@ -33,16 +33,37 @@
     <!-- Ürün Listesi -->
     <main class="product-container">
         <!-- Ürün Kartları -->
+        
+
         <div class="product-list">
-            <div class="product-card" data-product-id="1">
+
+
+            <div class="product-card" data-product-id="5">
                 <div class="product-image">
-                    <img src="../../img/burger.jpg" alt="Serpme Kahvaltı">
+                    <img src="../../img/burger.jpg" alt="Kilo">
                 </div>
                 <div class="product-info">
-                    <h3>Serpme Kahvaltı</h3>
-                    <p class="description">Zeytin, peynir çeşitleri, domates, salatalık, tereyağı, bal, reçel, yumurta, sınırsız çay</p>
+                    <h3>Sushi Çiğköfte</h3>
+                    <p class="description">Çiğ köfte, marul, limon ve sos ile birlikte paket servis</p>
                     <div class="price-cart">
-                        <span class="price">₺150.00</span>
+                        <span class="price">₺100.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="1">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Dürüm">
+                </div>
+                <div class="product-info">
+                    <h3>Öğrenci Dürüm</h3>
+                    <p class="description">80gr çiğ köfte, marul, domates, maydanoz ve limon ile</p>
+                    <div class="price-cart">
+                        <span class="price">₺35.00</span>
                         <button class="add-to-cart">
                             <i class="fa-solid fa-cart-plus"></i>
                             Sepete Ekle
@@ -53,13 +74,13 @@
 
             <div class="product-card" data-product-id="2">
                 <div class="product-image">
-                    <img src="../../img/burger.jpg" alt="Karışık Omlet">
+                    <img src="../../img/burger.jpg" alt="Porsiyon">
                 </div>
                 <div class="product-info">
-                    <h3>Karışık Omlet</h3>
-                    <p class="description">Kaşar peyniri, sucuk, domates, biber ile hazırlanmış omlet, yanında patates kızartması</p>
+                    <h3>Klasik Dürüm</h3>
+                    <p class="description">100gr çiğ köfte, marul, domates, maydanoz ve limon ile</p>
                     <div class="price-cart">
-                        <span class="price">₺75.00</span>
+                        <span class="price">₺45.00</span>
                         <button class="add-to-cart">
                             <i class="fa-solid fa-cart-plus"></i>
                             Sepete Ekle
@@ -70,13 +91,63 @@
 
             <div class="product-card" data-product-id="3">
                 <div class="product-image">
-                    <img src="../../img/burger.jpg" alt="Menemen">
+                    <img src="../../img/burger.jpg" alt="Mega Dürüm">
                 </div>
                 <div class="product-info">
-                    <h3>Menemen</h3>
-                    <p class="description">Taze domates, biber ve yumurta ile hazırlanmış klasik menemen, yanında sınırsız çay</p>
+                    <h3>Mega Dürüm</h3>
+                    <p class="description">125 gr. çiğ köfte ile hazırlanmış özel dürüm, bol yeşillik ve sos ile</p>
+                    <div class="price-cart">
+                        <span class="price">₺55.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="4">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Bol Malzeme">
+                </div>
+                <div class="product-info">
+                    <h3>Ultra Mega Dürüm</h3>
+                    <p class="description">150 gr. Çiğ köfte, turşu, marul, domates, havuç, kırmızı lahana ve özel sos ile</p>
                     <div class="price-cart">
                         <span class="price">₺65.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="5">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Kilo">
+                </div>
+                <div class="product-info">
+                    <h3>Double Dürüm</h3>
+                    <p class="description">175 gr. çiğ köfte, marul, limon ve sos ile birlikte paket servis</p>
+                    <div class="price-cart">
+                        <span class="price">₺75.00</span>
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-product-id="5">
+                <div class="product-image">
+                    <img src="../../img/burger.jpg" alt="Kilo">
+                </div>
+                <div class="product-info">
+                    <h3>Zurna Dürüm</h3>
+                    <p class="description">200 gr. çiğ köfte, marul, limon ve sos ile birlikte paket servis</p>
+                    <div class="price-cart">
+                        <span class="price">₺85.00</span>
                         <button class="add-to-cart">
                             <i class="fa-solid fa-cart-plus"></i>
                             Sepete Ekle

@@ -1,11 +1,12 @@
 /* Kategori Başlığı ve Arama */
 .category-header {
     padding: 6rem 1.25rem 1.25rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(250, 156, 34, 0.459);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 10;
+    border-radius: 5px;
 }
 
 .category-header h1 {
@@ -81,9 +82,10 @@
 }
 
 .product-image {
-    width: 120px;
+    width: 150px;
     height: 120px;
-    min-width: 120px;
+    min-width: 130px;
+    min-height: 125px;
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
@@ -278,7 +280,7 @@
     }
 
     .product-image {
-        width: 100px;
+        width: 150px;
         height: 100px;
         min-width: 100px;
     }
@@ -312,7 +314,7 @@
     }
 
     .product-image {
-        width: 90px;
+        width: 130px;
         height: 90px;
         min-width: 90px;
     }
