@@ -1,6 +1,6 @@
 /* Kategori Başlığı ve Arama */
 .category-header {
-    padding: 6rem 1.25rem 1.25rem;
+    padding: 5rem 1.25rem 1.25rem;
     background: rgba(250, 156, 34, 0.459);
     backdrop-filter: blur(10px);
     position: sticky;
