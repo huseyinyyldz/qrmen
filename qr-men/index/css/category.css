@@ -1,6 +1,6 @@
 /* Kategori Başlığı ve Arama */
 .category-header {
-    padding: 5rem 1.25rem 1.25rem;
+    padding: 3rem 1.25rem 1.25rem;
     background: rgba(250, 156, 34, 0.459);
     backdrop-filter: blur(10px);
     position: sticky;
@@ -48,6 +48,8 @@
 
 /* Ürün Listesi */
 .product-container {
+    margin-bottom: 6rem;
+    /* padding-bottom: 8rem; */
     padding: 1.25rem;
     overflow-y: auto;
     flex: 1;

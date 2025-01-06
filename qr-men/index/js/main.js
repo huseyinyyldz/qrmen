@@ -15,31 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="category-menu-header">Kategoriler</div>
         <div class="category-grid">
             <a href="${basePath}categories/breakfast.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Kahvaltı" class="category-image">
+                <img src="${basePath}../img/categories/cig-kfte.jpg" alt="Kahvaltı" class="category-image">
                 <div class="category-title">Çiğköfte Dürüm Menüler</div>
             </a>
             <a href="${basePath}categories/hot-drinks.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Sıcak İçecekler" class="category-image">
+                <img src="${basePath}../img/categories/ekmek-arasi.jpg" alt="Sıcak İçecekler" class="category-image">
                 <div class="category-title">Ekmek Arası Ürünlerr</div>
             </a>
             <a href="${basePath}categories/cold-drinks.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Soğuk İçecekler" class="category-image">
+                <img src="${basePath}../img/categories/cold.jpg" alt="Soğuk İçecekler" class="category-image">
                 <div class="category-title">Soğuk İçecekler</div>
             </a>
             <a href="${basePath}categories/beverages.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Kutu İçecekler" class="category-image">
+                <img src="${basePath}../img/categories/cig-prsiyn.jpg" alt="Kutu İçecekler" class="category-image">
                 <div class="category-title">Çiğ Köfte Porsiyonlar</div>
             </a>
             <a href="${basePath}categories/snacks.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Atıştırmalıklar" class="category-image">
+                <img src="${basePath}../img/categories/atistirmalik.jpg" alt="Atıştırmalıklar" class="category-image">
                 <div class="category-title">Atıştırmalıklar</div>
             </a>
             <a href="${basePath}categories/main-dishes.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Ana Yemek" class="category-image">
+                <img src="${basePath}../img/categories/ana-yemek.jpg" alt="Ana Yemek" class="category-image">
                 <div class="category-title">Ana Yemek</div>
             </a>
             <a href="${basePath}categories/burgers.html" class="category-card">
-                <img src="${basePath}../img/burger.jpg" alt="Burgerler" class="category-image">
+                <img src="${basePath}../img/categories/burger.jpg" alt="Burgerler" class="category-image">
                 <div class="category-title">Burgerler</div>
             </a>
         </div>

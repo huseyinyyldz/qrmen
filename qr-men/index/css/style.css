@@ -17,7 +17,7 @@
 
 body {
     max-height: 100vh;
-    min-height: 90vh;
+    min-height: 98vh;
     background: url('../../img/burger.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
@@ -154,7 +154,7 @@ footer {
     width: 100%;
     background: var(--primary-color);
     backdrop-filter: blur(10px);
-    padding: 0.9375rem 0.5rem;
+    /* padding: 0.9375rem 0.5rem; */
     z-index: 1000;
 }
 
@@ -206,7 +206,7 @@ footer {
 }
 
 .footer-button i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.3125rem;
 }
 
@@ -268,7 +268,7 @@ footer {
     z-index: 49;
     transition: right 0.3s ease-in-out;
     overflow-y: auto;
-    padding: 5rem 1rem 2rem 1rem;
+    padding: 3.5rem 1rem 2rem 1rem;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -616,11 +616,11 @@ main {
 /* Responsive Footer */
 @media (max-width: 768px) {
     footer {
-        padding: 0.75rem 0.4rem;
+        /* padding: 0.75rem 0.4rem; */
     }
 
     .footer-button {
-        padding: 0.4rem;
+        padding: 0rem;
     }
 
     .footer-button i {
@@ -650,11 +650,11 @@ main {
 
 @media (max-width: 480px) {
     footer {
-        padding: 0.4rem 0.2rem;
+        /* padding: 0.4rem 0.2rem; */
     }
 
     .footer-button {
-        padding: 0.3rem;
+        /* padding: 0.3rem; */
     }
 
     .footer-button i {
@@ -663,7 +663,7 @@ main {
     }
 
     .footer-button span {
-        font-size: 0.65rem;
+        font-size: 0.70rem;
     }
 
     .cart-button {
