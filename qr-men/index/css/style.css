@@ -125,25 +125,25 @@ body::before {
 
 .logo {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
     margin: 0 auto;
-    max-width: 28.75rem;
+    max-width: 35rem;
     background: rgba(255, 107, 0, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 0.9375rem;
+    border-radius: 1.2rem;
     border: 1px solid rgba(255, 107, 0, 0.2);
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .logo i {
-    font-size: 5rem;
+    font-size: 6.5rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .logo h1 {
     color: var(--text-light);
-    font-size: 3rem;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
@@ -176,7 +176,7 @@ footer {
     flex-direction: column;
     align-items: center;
     font-size: 0.875rem;
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     position: relative;
@@ -191,7 +191,7 @@ footer {
 .footer-button.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 0.3rem;
     left: 50%;
     transform: translateX(-50%);
     width: 1.5rem;
@@ -206,8 +206,8 @@ footer {
 }
 
 .footer-button i {
-    font-size: 1.2rem;
-    margin-bottom: 0.3125rem;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
 }
 
 .footer-button span {
@@ -219,8 +219,8 @@ footer {
 }
 
 .cart-button {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     background: white;
     border-radius: 50%;
     position: relative;
@@ -237,8 +237,8 @@ footer {
 }
 
 .cart-button i {
-    font-size: 1.25rem;
-    margin-bottom: 0.2rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
 }
 
 .cart-button span {
@@ -654,30 +654,159 @@ main {
     }
 
     .footer-button {
-        /* padding: 0.3rem; */
+        padding: 0.6rem;
     }
 
     .footer-button i {
-        font-size: 2rem;
-        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
     }
 
     .footer-button span {
-        font-size: 0.70rem;
+        font-size: 0.7rem;
     }
 
     .cart-button {
-        width: 6rem;
-        height: 6rem;
-        bottom: 2rem;
+        width: 3.8rem;
+        height: 3.8rem;
+        bottom: 1.3rem;
     }
 
     .cart-button i {
-        font-size: 2rem;
-        margin-bottom: 0.1rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Genel Responsive İyileştirmeler */
+@media (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .logo {
+        margin-top: 8rem;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 13px;
     }
 
-    .cart-button span {
-        font-size: 0.6rem;
+    .action-buttons {
+        padding: 1rem;
+    }
+
+    .button-row {
+        gap: 0.75rem;
+    }
+
+    .action-button {
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-top: 6rem;
+        padding: 1rem;
+    }
+
+    .logo i {
+        font-size: 4rem;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .action-buttons {
+        padding: 0.75rem;
+    }
+
+    .button-row {
+        gap: 0.5rem;
+    }
+
+    .action-button {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        margin-top: 5rem;
+        padding: 0.75rem;
+    }
+
+    .logo i {
+        font-size: 3rem;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .footer-nav {
+        gap: 0.25rem;
+    }
+}
+
+/* Yatay Ekranlar için Optimizasyon */
+@media (orientation: landscape) and (max-height: 600px) {
+    .logo {
+        margin-top: 4rem;
+        padding: 0.5rem;
+    }
+
+    .action-buttons {
+        padding: 0.5rem;
+    }
+
+    .button-row {
+        gap: 0.5rem;
+    }
+}
+
+/* Tablet Optimizasyonu */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .action-buttons {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .button-row {
+        gap: 1rem;
+    }
+}
+
+/* Büyük Ekranlar için Optimizasyon */
+@media (min-width: 1440px) {
+    .action-buttons {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        max-width: 32rem;
+    }
+}
+
+/* Dokunmatik Cihazlar için İyileştirmeler */
+@media (hover: none) {
+    .action-button:active {
+        transform: scale(0.98);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .glass-button:active {
+        transform: scale(0.98);
+    }
+
+    .footer-button:active {
+        opacity: 0.8;
     }
 } 
