@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FF6B00">
+    <title>Siparişlerim - QR Menü</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-buttons">
+            <a href="../index.html" class="glass-button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="page-title">Siparişlerim</h1>
+        </div>
+    </header>
+
+    <main class="orders-container">
+        <div class="orders-list">
+            <!-- Örnek sipariş kartları -->
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-date">07.01.2024</span>
+                    <span class="order-status delivered">Teslim Edildi</span>
+                </div>
+                <div class="order-items">
+                    <div class="order-item">
+                        <span class="item-name">Çiğ Köfte Dürüm</span>
+                        <span class="item-quantity">x2</span>
+                        <span class="item-price">₺60.00</span>
+                    </div>
+                    <div class="order-item">
+                        <span class="item-name">Ayran</span>
+                        <span class="item-quantity">x2</span>
+                        <span class="item-price">₺20.00</span>
+                    </div>
+                </div>
+                <div class="order-footer">
+                    <span class="total-price">Toplam: ₺80.00</span>
+                    <button class="reorder-btn">Tekrar Sipariş Ver</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="../index.html" class="footer-button">
+                <i class="fa-solid fa-house"></i>
+                <span>Ana Sayfa</span>
+            </a>
+            <a href="#" class="footer-button" id="menuButton">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Menü</span>
+            </a>
+            <a href="cart.html" class="cart-button btn-cart">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span>Sepet</span>
+            </a>
+            <a href="campaigns.html" class="footer-button">
+                <i class="fa-solid fa-tags"></i>
+                <span>Kampanyalar</span>
+            </a>
+            <a href="orders.html" class="footer-button active">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Siparişlerim</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/orders.js"></script>
+</body>
+</html> 

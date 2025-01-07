@@ -24,7 +24,7 @@
         </div>
     </header>
 
-        <!-- Kategori Menüsü 
+        <!-- Kategori Menüsü -->
         <div class="category-menu" id="categoryMenu">
         <h2 class="category-menu-header">Menüler</h2>
         <div class="category-grid">
@@ -58,7 +58,7 @@
             </a>
         </div>
         </div>
-         -->
+
     <!-- Ana İçerik -->
     <main>
         <div class="logo">
@@ -68,15 +68,15 @@
 
         <div class="action-buttons">
             <div class="button-row">
-                <a href="pages/order.html" class="action-button">
+                <a href="#" class="action-button" id="orderButton">
                     <i class="fa-solid fa-utensils"></i>
                     <span>Sipariş Ver</span>
                 </a>
-                <a href="pages/orders.html" class="action-button">
+                <a href="pages/orders.html" class="action-button" id="myOrdersButton">
                     <i class="fa-solid fa-receipt"></i>
                     <span>Siparişlerim</span>
                 </a>
-                <a href="#" class="action-button">
+                <a href="../index/pages/cart.html" class="action-button">
                     <i class="fa-solid fa-wallet"></i>
                     <span>Hesap Öde</span>
                 </a>
@@ -108,7 +108,7 @@
                 <i class="fa-solid fa-house"></i>
                 <span>Ana Sayfa</span>
             </a>
-            <a href="#" class="footer-button">
+            <a href="#" class="footer-button" id="menuButton">
                 <i class="fa-solid fa-book-open-reader"></i>
                 <span>Menü</span>
             </a>
@@ -120,12 +120,71 @@
                 <i class="fa-solid fa-tags"></i>
                 <span>Kampanyalar</span>
             </a>
-            <a href="pages/orders.html" class="footer-button">
+            <a href="pages/orders.html" class="footer-button" id="footerOrdersButton">
                 <i class="fa-solid fa-receipt"></i>
                 <span>Siparişlerim</span>
             </a>
         </nav>
     </footer>
+
+    <!-- Kampanyalar Modal -->
+    <div class="campaign-bottom-sheet" id="campaignsModal">
+        <div class="campaign-sheet-content">
+            <div class="campaign-sheet-header">
+                <h2>Kampanyalar</h2>
+                <button class="close-sheet" id="closeCampaigns">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="campaigns-list">
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="../img/burger.jpg" alt="Kampanya 1">
+                    </div>
+                    <div class="campaign-details">
+                        <h3>2 Dürüm Al 1 Ayran Bedava!</h3>
+                        <p>2 adet dürüm siparişinize 1 adet ayran hediye.</p>
+                        <div class="campaign-code">
+                            <span>DURUMAYRAN</span>
+                            <button class="copy-code" data-code="DURUMAYRAN">Kodu Kullan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="../img/categories/ekmek-arasi.jpg" alt="Kampanya 2">
+                    </div>
+                    <div class="campaign-details">
+                        <h3>%15 İndirim!</h3>
+                        <p>100 TL ve üzeri siparişlerinizde %15 indirim.</p>
+                        <div class="campaign-code">
+                            <span>INDIRIM15</span>
+                            <button class="copy-code" data-code="INDIRIM15">Kodu Kullan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ürün Detay Modal -->
+    <div class="product-modal">
+        <div class="product-modal-content">
+            <button class="close-product-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="product-modal-image">
+                <img src="" alt="Ürün Görseli">
+            </div>
+            <div class="product-modal-details">
+                <div class="product-modal-header">
+                    <h3>Ürün Adı</h3>
+                    <div class="product-modal-price">₺0.00</div>
+                </div>
+                <p class="product-modal-description">Ürün açıklaması burada yer alacak.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

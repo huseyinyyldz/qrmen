@@ -99,4 +99,188 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
+
+    // Kategori menüsü için elementler
+    const orderButton = document.getElementById('orderButton');
+    const menuButton = document.getElementById('menuButton');
+    const myOrdersButton = document.getElementById('myOrdersButton');
+    const footerOrdersButton = document.getElementById('footerOrdersButton');
+
+    // Sipariş ver ve menü butonları için fonksiyon
+    function toggleCategoryMenu() {
+        categoryMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
+
+    // Siparişlerim sayfasına yönlendirme fonksiyonu
+    function goToOrders() {
+        window.location.href = 'pages/orders.html';
+    }
+
+    // Event Listeners
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleCategoryMenu);
+    }
+
+    if (orderButton) {
+        orderButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleCategoryMenu();
+        });
+    }
+
+    if (menuButton) {
+        menuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleCategoryMenu();
+        });
+    }
+
+    if (myOrdersButton) {
+        myOrdersButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            goToOrders();
+        });
+    }
+
+    if (footerOrdersButton) {
+        footerOrdersButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            goToOrders();
+        });
+    }
+
+    // Kategori menüsünü dışarı tıklayınca kapatma
+    document.addEventListener('click', function(e) {
+        if (categoryMenu && categoryMenu.classList.contains('active')) {
+            if (!categoryMenu.contains(e.target) && !menuToggle.contains(e.target) && 
+                !orderButton.contains(e.target) && !menuButton.contains(e.target)) {
+                categoryMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        }
+    });
+
+    // Kampanya modalı için elementler
+    const campaignSheet = document.getElementById('campaignsModal');
+    const campaignButtons = document.querySelectorAll('a[href="pages/campaigns.html"]');
+    const closeSheet = document.getElementById('closeCampaigns');
+    const copyButtons = document.querySelectorAll('.copy-code');
+
+    // Kampanya modalını aç
+    function openCampaignSheet() {
+        if (campaignSheet) {
+            campaignSheet.style.visibility = 'visible';
+            campaignSheet.style.pointerEvents = 'auto';
+            document.body.style.overflow = 'hidden';
+            
+            requestAnimationFrame(() => {
+                campaignSheet.classList.add('active');
+            });
+        }
+    }
+
+    // Kampanya modalını kapat
+    function closeCampaignSheet() {
+        if (campaignSheet) {
+            campaignSheet.classList.remove('active');
+            document.body.style.overflow = '';
+            campaignSheet.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                campaignSheet.style.visibility = 'hidden';
+            }, 300);
+        }
+    }
+
+    // Kampanya kodunu sepete ekle
+    function applyCampaignCode(code) {
+        localStorage.setItem('campaignCode', code);
+        
+        const button = document.querySelector(`[data-code="${code}"]`);
+        if (button) {
+            button.textContent = 'Kod Uygulandı';
+            button.classList.add('copied');
+            button.disabled = true;
+            
+            setTimeout(() => {
+                closeCampaignSheet();
+                window.location.href = 'pages/cart.html';
+            }, 1500);
+        }
+    }
+
+    // Event Listeners
+    if (campaignButtons) {
+        campaignButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openCampaignSheet();
+            });
+        });
+    }
+
+    if (closeSheet) {
+        closeSheet.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeCampaignSheet();
+        });
+    }
+
+    if (copyButtons) {
+        copyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const code = this.getAttribute('data-code');
+                applyCampaignCode(code);
+            });
+        });
+    }
+
+    // Modal dışına tıklayınca kapat
+    if (campaignSheet) {
+        campaignSheet.addEventListener('click', function(e) {
+            if (e.target === campaignSheet) {
+                e.stopPropagation();
+                closeCampaignSheet();
+            }
+        });
+    }
+
+    // Ürün modalı için elementler
+    const productModal = document.querySelector('.product-modal');
+    const closeProductModal = document.querySelector('.close-product-modal');
+    const productCards = document.querySelectorAll('.product-card');
+
+    // Ürün modalını aç/kapa
+    function toggleProductModal() {
+        if (productModal) {
+            productModal.classList.toggle('active');
+            document.body.style.overflow = productModal.classList.contains('active') ? 'hidden' : '';
+        }
+    }
+
+    // Event Listeners
+    if (productCards) {
+        productCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleProductModal();
+            });
+        });
+    }
+
+    if (closeProductModal) {
+        closeProductModal.addEventListener('click', toggleProductModal);
+    }
+
+    // Modal dışına tıklayınca kapat
+    if (productModal) {
+        productModal.addEventListener('click', function(e) {
+            if (e.target === productModal) {
+                toggleProductModal();
+            }
+        });
+    }
 }); 
