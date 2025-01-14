@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="${basePath}../img/categories/burger.jpg" alt="Burgerler" class="category-image">
                 <div class="category-title">Burgerler</div>
             </a>
+            <a href="${basePath}categories/burgers.html" class="category-card">
+                <img src="${basePath}../img/categories/burger.jpg" alt="Burgerler" class="category-image">
+                <div class="category-title">Burgerler</div>
+            </a>
         </div>
     `;
     body.appendChild(categoryMenu);
@@ -103,13 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Kategori menüsü için elementler
     const orderButton = document.getElementById('orderButton');
     const menuButton = document.getElementById('menuButton');
+    const footerMenuButton = document.getElementById('footerMenuButton');
     const myOrdersButton = document.getElementById('myOrdersButton');
     const footerOrdersButton = document.getElementById('footerOrdersButton');
 
     // Sipariş ver ve menü butonları için fonksiyon
     function toggleCategoryMenu() {
-        categoryMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        if (categoryMenu && menuToggle) {
+            categoryMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Menü açıkken body scroll'u engelle
+            if (categoryMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
     }
 
     // Siparişlerim sayfasına yönlendirme fonksiyonu
@@ -136,6 +150,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (footerMenuButton) {
+        footerMenuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleCategoryMenu();
+        });
+    }
+
     if (myOrdersButton) {
         myOrdersButton.addEventListener('click', function(e) {
             e.preventDefault();
@@ -150,26 +171,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Kategori menüsünü dışarı tıklayınca kapatma
+    // Menü dışına tıklayınca kapat
     document.addEventListener('click', function(e) {
         if (categoryMenu && categoryMenu.classList.contains('active')) {
             if (!categoryMenu.contains(e.target) && !menuToggle.contains(e.target) && 
-                !orderButton.contains(e.target) && !menuButton.contains(e.target)) {
+                !footerMenuButton.contains(e.target)) {
                 categoryMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.body.style.overflow = '';
             }
         }
     });
 
     // Kampanya modalı için elementler
     const campaignSheet = document.getElementById('campaignsModal');
-    const campaignButtons = document.querySelectorAll('a[href="pages/campaigns.html"]');
+    const campaignButtons = document.querySelectorAll('a[href="../pages/campaigns.html"], a[href="pages/campaigns.html"], a[href="#"][class*="footer-button"]:has(i.fa-tags)');
     const closeSheet = document.getElementById('closeCampaigns');
     const copyButtons = document.querySelectorAll('.copy-code');
 
     // Kampanya modalını aç
     function openCampaignSheet() {
         if (campaignSheet) {
+            // Eğer modal zaten açıksa kapat
+            if (campaignSheet.classList.contains('active')) {
+                closeCampaignSheet();
+                return;
+            }
+            
             campaignSheet.style.visibility = 'visible';
             campaignSheet.style.pointerEvents = 'auto';
             document.body.style.overflow = 'hidden';
@@ -259,6 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
             productModal.classList.toggle('active');
             document.body.style.overflow = productModal.classList.contains('active') ? 'hidden' : '';
         }
+
     }
 
     // Event Listeners
@@ -283,4 +312,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Görüş Bildirme Modal İşlemleri
+    const feedbackButton = document.querySelector('a[href="pages/feedback.html"]');
+    const feedbackModal = document.getElementById('feedbackModal');
+    const closeFeedback = document.getElementById('closeFeedback');
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        feedbackModal.classList.add('active');
+    });
+
+    closeFeedback.addEventListener('click', () => {
+        feedbackModal.classList.remove('active');
+    });
+
+    feedbackModal.addEventListener('click', (e) => {
+        if (e.target === feedbackModal) {
+            feedbackModal.classList.remove('active');
+        }
+    });
+
+    feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Form verilerini al
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            rating: document.querySelector('input[name="rating"]:checked')?.value || '',
+            feedback: document.getElementById('feedback').value
+        };
+
+        // Form verilerini konsola yazdır (test için)
+        console.log('Görüş Bildirme Formu Verileri:', formData);
+        
+        // Formu temizle
+        feedbackForm.reset();
+        
+        // Modalı kapat
+        feedbackModal.classList.remove('active');
+        
+        // Kullanıcıya bilgi ver
+        alert('Görüşleriniz için teşekkür ederiz!');
+    });
 }); 

@@ -14,9 +14,7 @@
 <body>
     <header class="header">
         <div class="top-buttons">
-            <a href="#" class="glass-button">
-                <i class="fa-solid fa-qrcode"></i>
-            </a>
+            
             <button class="menu-toggle" id="menuToggle">
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-xmark"></i>
@@ -62,8 +60,7 @@
     <!-- Ana İçerik -->
     <main>
         <div class="logo">
-            <i class="fa-solid fa-m"></i>
-            <h1>Mahana</h1>
+            <img src="../img/mahanalogo.svg" alt="Mahana Logo" class="logo-image">
         </div>
 
         <div class="action-buttons">
@@ -183,6 +180,44 @@
                 </div>
                 <p class="product-modal-description">Ürün açıklaması burada yer alacak.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Görüş Bildirme Modal -->
+    <div class="feedback-modal" id="feedbackModal">
+        <div class="feedback-modal-content">
+            <div class="feedback-modal-header">
+                <h2>Görüş Bildir</h2>
+                <button class="close-feedback" id="closeFeedback">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form id="feedbackForm" class="feedback-form">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="Adınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" placeholder="Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"><i class="fas fa-star"></i></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="feedback" name="feedback" placeholder="Görüşlerinizi buraya yazın..." required></textarea>
+                </div>
+                <button type="submit" class="submit-feedback">Gönder</button>
+            </form>
         </div>
     </div>
 

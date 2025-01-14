@@ -20,6 +20,10 @@
 }
 
 .order-card {
+    font-size: 1.5rem;
+    min-width: 350px;
+    max-width: 400px;
+    height: 200px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 1rem;
     padding: 1rem;

@@ -54,21 +54,22 @@
 }
 
 .cart-item-info {
+    font-size: 1.5rem;
+    padding: 1.5rem 2.75rem;
     flex: 1;
-    padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .cart-item-info h3 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     color: #333;
     margin-bottom: 0.25rem;
 }
 
 .cart-item-price {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #ff4d4d;
 }
@@ -125,6 +126,9 @@
 
 /* Sepet Özeti */
 .cart-summary {
+    min-width: 350px;
+    max-width: 400px;
+    height: 200px;
     background: white;
     border-radius: 0.75rem;
     padding: 1.25rem;
@@ -220,15 +224,15 @@
     }
 
     .cart-item-info {
-        padding: 0.5rem 0.75rem;
+        padding: 1.5rem 2.75rem;
     }
 
     .cart-item-info h3 {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .cart-item-price {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .quantity-btn {
@@ -242,6 +246,6 @@
 
     .cart-buttons button {
         padding: 0.75rem;
-        font-size: 0.9rem;
+        font-size: 1.8rem;
     }
 } 

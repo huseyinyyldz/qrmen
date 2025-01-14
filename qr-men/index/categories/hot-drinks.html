@@ -11,9 +11,7 @@
 <body>
     <header class="header">
         <div class="top-buttons">
-            <a href="#" class="glass-button">
-                <i class="fa-solid fa-qrcode"></i>
-            </a>
+           
             <button class="menu-toggle" id="menuToggle">
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-xmark"></i>
@@ -142,13 +140,53 @@
         </div>
     </div>
 
+    <!-- Kampanyalar Modal -->
+    <div class="campaign-bottom-sheet" id="campaignsModal">
+        <div class="campaign-sheet-content">
+            <div class="campaign-sheet-header">
+                <h2>Kampanyalar</h2>
+                <button class="close-sheet" id="closeCampaigns">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="campaigns-list">
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="../../img/burger.jpg" alt="Kampanya 1">
+                    </div>
+                    <div class="campaign-details">
+                        <h3>2 Dürüm Al 1 Ayran Bedava!</h3>
+                        <p>2 adet dürüm siparişinize 1 adet ayran hediye.</p>
+                        <div class="campaign-code">
+                            <span>DURUMAYRAN</span>
+                            <button class="copy-code" data-code="DURUMAYRAN">Kodu Kullan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="campaign-card">
+                    <div class="campaign-image">
+                        <img src="../../img/categories/ekmek-arasi.jpg" alt="Kampanya 2">
+                    </div>
+                    <div class="campaign-details">
+                        <h3>%15 İndirim!</h3>
+                        <p>100 TL ve üzeri siparişlerinizde %15 indirim.</p>
+                        <div class="campaign-code">
+                            <span>INDIRIM15</span>
+                            <button class="copy-code" data-code="INDIRIM15">Kodu Kullan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <nav class="footer-nav">
             <a href="../index.html" class="footer-button">
                 <i class="fa-solid fa-house"></i>
                 <span>Ana Sayfa</span>
             </a>
-            <a href="../pages/menu.html" class="footer-button active">
+            <a href="#" class="footer-button" id="footerMenuButton">
                 <i class="fa-solid fa-book-open-reader"></i>
                 <span>Menü</span>
             </a>
